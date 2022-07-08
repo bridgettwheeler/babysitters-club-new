@@ -1,2 +1,2 @@
-class KidsController < ApplicationController
+class Api:KidsController < ApplicationController
 end
