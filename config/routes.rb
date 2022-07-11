@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  namespace :api do
   resources :kids
   resources :bookings
   resources :babysitters
   resources :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  end
+  post "/signup", to: "users#create"
+  get "/me", to: "users#show"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
+  delete "/users/:id", to: "users#destroy"
 end
