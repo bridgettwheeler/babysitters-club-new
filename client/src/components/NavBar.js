@@ -16,7 +16,6 @@ function NavBar({ user, setUser }) {
                 color: "white"
             }}
                 exact
-                style={style}
                 to="/"
             >Babysitters</NavLink>
 
@@ -25,7 +24,6 @@ function NavBar({ user, setUser }) {
                 color: "white"
             }}
                 exact
-                style={style}
                 to="/profile"
             >Profile</NavLink>
         <button variant="outline" onClick={handleLogoutClick}>Logout</button> 

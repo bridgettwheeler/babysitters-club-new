@@ -1,4 +1,4 @@
-class Api:UsersController < ApplicationController
+class Api::UsersController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
     skip_before_action :authorize, only: :create
 
@@ -11,6 +11,7 @@ class Api:UsersController < ApplicationController
     end
     
     def create
+        # binding.pry
         user = User.create!(user_params)
         session[:user_id] = user.id
         render json: user, status: :created

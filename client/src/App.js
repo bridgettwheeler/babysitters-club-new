@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+// import { UserProvider } from "../context/user";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./NavBar";
-// import Login from "../pages/Login";
-// import NewBookingForm from "./NewBookingForm";
-// import Babysitters from "../pages/Babysitters";
-// import Profile from "../pages/Profile";
+import NavBar from "./components/NavBar";
+import Login from "./pages/Login";
+import NewBookingForm from "./components/NewBookingForm";
+import Babysitters from "./pages/Babysitters";
+import Profile from "./pages/Profile";
 // import EditBookingForm from "./EditBookingForm";
 // import EditProfileForm from "./EditProfileForm";
 
@@ -26,15 +27,15 @@ function App() {
   return (
     <>
       <main>
-        <BrowserRouter>
+      <BrowserRouter>
       <NavBar user={user} setUser={setUser} />
-        <Routes>
+        {/* <Routes>
           <Route path="/bookings/:id/edit" element={<EditBookingForm user={user} />} />
         </Routes>
 
         <Routes>
           <Route path="/profile/:id/edit" element={<EditProfileForm user={user} />} />
-        </Routes>
+        </Routes> */}
 
         <Routes>
           <Route path="/bookings/new" element={<NewBookingForm user={user}/>} />
@@ -48,7 +49,7 @@ function App() {
           <Route path="/profile" element={<Profile user={user} setUser={setUser} />} />
         </Routes>
 
-        </BrowserRouter>
+      </BrowserRouter>
       </main>
     </>
   );
