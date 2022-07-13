@@ -1,5 +1,5 @@
 class Api::UsersController < ApplicationController
-    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
+    # rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
     skip_before_action :authorize, only: :create
 
     def index
@@ -11,9 +11,10 @@ class Api::UsersController < ApplicationController
     end
     
     def create
-        # binding.pry
+        
         user = User.create!(user_params)
         session[:user_id] = user.id
+        binding.pry
         render json: user, status: :created
     end
 
@@ -24,9 +25,9 @@ class Api::UsersController < ApplicationController
 
     private
 
-    def render_unprocessable_entity(invalid)
-        render json:{error: invalid.record.errors}, status: :unprocessable_entity
-    end
+    # def render_unprocessable_entity(invalid)
+    #     render json:{error: invalid.record.errors}, status: :unprocessable_entity
+    # end
 
     def user_params
     params.permit(:username, :password, :password_confirmation, :email, :first_name, :last_name, :budget, :about_us)
