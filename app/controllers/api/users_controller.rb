@@ -14,7 +14,6 @@ class Api::UsersController < ApplicationController
         
         user = User.create!(user_params)
         session[:user_id] = user.id
-        binding.pry
         render json: user, status: :created
     end
 

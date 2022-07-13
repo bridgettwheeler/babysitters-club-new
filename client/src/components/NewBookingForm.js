@@ -13,7 +13,7 @@ const NewBookingForm = ({user}) => {
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
-    fetch("/api/bookings/new", {
+    fetch("/api/bookings", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

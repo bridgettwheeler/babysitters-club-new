@@ -7,7 +7,6 @@ class Api::BookingsController < ApplicationController
           bookings = Booking.all
         end
         render json: bookings, include: :user
-        end
     end
 
     def create
