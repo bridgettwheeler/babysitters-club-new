@@ -38,7 +38,7 @@ function App() {
         </Routes> */}
 
         <Routes>
-          <Route path="/bookings/new" element={<NewBookingForm user={user}/>} />
+          <Route path="/babysitters/:id/bookings/new" element={<NewBookingForm user={user}/>} />
         </Routes>
 
         <Routes>
