@@ -7,7 +7,7 @@ const BabysitterCard = ({babysitter}) => {
           <h3>Desired Pay Rate:${babysitter.pay_rate}/hr</h3>
           {/* <h3>Has cared for {needs to count how many parent ids} families</h3> */}
           <p>{babysitter.about_me}</p>
-          <Link to="/babysitters/:id/bookings/new"><button>Book Me!</button></Link>
+          <Link to={`/babysitters/${babysitter.id}/bookings`}><button >Book Me!</button></Link>
           <br></br>
       </div>
     )

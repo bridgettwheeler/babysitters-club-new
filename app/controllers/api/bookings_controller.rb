@@ -10,9 +10,10 @@ class Api::BookingsController < ApplicationController
     end
 
     def create
-        booking = @current_user.bookings.create!(booking_params)
-        render json: booking, status: :created
-
+        babysitter = Babysitter.find_by!(id:params[:id])
+        user = @current_user
+        booking = bookings.create!(babysitter:babysitter, user:user, date: params[:booking] [:date])
+        render json: booking, include: :babysitter, :user status: :created
     end
 
     def show

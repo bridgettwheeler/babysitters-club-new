@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BabysittersList from "./BabysittersList";
 
-const NewBookingForm = ({user}) => {
+const NewBookingForm = ({user, babysitter}) => {
   const [booking, setBooking] = useState({
     date: "",
   })
@@ -13,7 +14,7 @@ const NewBookingForm = ({user}) => {
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
-    fetch("/api/bookings", {
+    fetch(`/api/babysitters/booking`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +42,7 @@ const NewBookingForm = ({user}) => {
         id="date"
         value={booking.date}
         />
-        <button type="submit">{isLoading ? "Loading..." : "Book this sitter"}</button>
+        <button type="submit">{isLoading ? "Loading..." : "Book"}</button>
       </form>
     </div>
   );

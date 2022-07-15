@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   namespace :api do
   resources :kids
   resources :bookings
-  resources :babysitters
+  resources :babysitters do
+    resources :bookings
+  end
   resources :users
   
   post "/signup", to: "users#create"
@@ -10,6 +12,6 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   delete "/users/:id", to: "users#destroy"
-  # post "/babysitters/:id/bookings/new", to: "bookings#create"
+  post "/babysitters/booking", to: "bookings#create"
   end
 end
