@@ -47,7 +47,7 @@ function Profile({user, setUser}) {
   return (
     <div>
         <h2>Your Account Details:</h2>
-        Welcome, {user.email} !
+        Welcome, {user.first_name} !
         <div>
 
           {user.kids.map((kid) => kid.first_name)} 
@@ -55,14 +55,16 @@ function Profile({user, setUser}) {
         
 
          <form name='account'>
-        <label htmlFor="date">Email</label>
+        <label htmlFor="date">Email: </label>
         <input
         onChange={ e => setEmail({...email, [e.target.name]: e.target.value})}
         name="email"
         type="text"
         id="email"
         />
-        <button type="submit" onClick={handleSubmit}>Update email</button>
+        <button type="submit" onClick={handleSubmit} placeholder={user.email}>Update email</button>
+        <p>Your current email is {user.email}. Enter a new email address to update it.</p>
+
       </form>
 
       <button onClick={handleClick}>Delete Account</button> 
