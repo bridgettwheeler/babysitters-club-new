@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   delete "/users/:id", to: "users#destroy"
   post "/babysitters/booking", to: "bookings#create"
+  patch "/users/:id", to: "users#update"
   end
 end

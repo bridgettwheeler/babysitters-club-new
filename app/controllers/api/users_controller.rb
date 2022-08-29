@@ -6,6 +6,15 @@ class Api::UsersController < ApplicationController
         render json: User.all
     end
 
+    def update
+        user = User.find_by(id:params[:id])
+        if user&.update(user_params)
+        render json: user
+        else
+          render json: {errors: user.errors.full_messages.to_sentence}
+        end
+    end
+
     def show
         render json: @current_user
     end
