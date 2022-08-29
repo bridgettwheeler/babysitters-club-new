@@ -2,19 +2,26 @@ import {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 
 
-function Profile({user, booking}) {
-
-
+function Profile({user, setUser}) {
   const navigate = useNavigate();
+
+
   const [email, setEmail] = useState({
     email: "",
   
   })
+  
   const handleClick = () => {
     fetch(`api/users/${user.id}`, {
         method: "DELETE",
     }) 
-    .then( () => navigate("/profile"))
+    .then( resp => {
+      if (resp.ok){
+        setUser(null)
+      }
+    })
+
+    //needs to log user out and route to login
   }
 
   function handleSubmit(e) {
@@ -28,7 +35,7 @@ function Profile({user, booking}) {
     })
       .then(resp => {
         if (resp.ok){
-          resp.json().then(()=> alert('email updated'))
+          resp.json().then(()=> alert('Email updated to:' + resp.user.email))
 
         } else {
           resp.json().then((error)=> alert(error))
@@ -40,7 +47,11 @@ function Profile({user, booking}) {
   return (
     <div>
         <h2>Your Account Details:</h2>
-        Welcome, {user.username} !
+        Welcome, {user.email} !
+        <div>
+
+          {user.kids.map((kid) => kid.first_name)} 
+        </div>
         
 
          <form name='account'>
