@@ -5,7 +5,9 @@ import BabysittersList from "./BabysittersList";
 const NewBookingForm = ({user, babysitter}) => {
   const [booking, setBooking] = useState({
     date: "",
-  })
+    babysitter_id:""
+  });
+
 
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -40,7 +42,7 @@ const NewBookingForm = ({user, babysitter}) => {
         name="date"
         type="datetime-local"
         id="date"
-        value={booking.date}
+        value={booking.date, booking.babysitter_id}
         />
         <button type="submit">{isLoading ? "Loading..." : "Book"}</button>
       </form>

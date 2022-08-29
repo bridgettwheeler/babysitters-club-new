@@ -1,7 +1,14 @@
 import BabysittersList from "../components/BabysittersList";
-import { useEffect, useState } from "react";
+import { useEffect, useState, createContext } from "react";
 
+const BabySitterContext = createContext();
 
+// return (
+//     <BabySitterContext.Provider value={user}>
+//       <h1>{`Hello ${user}!`}</h1>
+//       <Component2 />
+//     </BabySitterContext.Provider>
+//   );
 
 const BabysittersContainer = ({user}) => {
     const [babysitters, setBabysitters] = useState([])
@@ -14,11 +21,19 @@ const BabysittersContainer = ({user}) => {
               })
       }, []);
 
+//   return (
+//     <div>
+//         <BabysittersList user={user} babysitters={babysitters} />
+//     </div>
+//   )
+
   return (
-    <div>
+    <BabySitterContext.Provider value={user}>
+      <div>
         <BabysittersList user={user} babysitters={babysitters} />
     </div>
-  )
+    </BabySitterContext.Provider>
+  );
 }
 
 
