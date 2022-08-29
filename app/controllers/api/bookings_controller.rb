@@ -10,9 +10,9 @@ class Api::BookingsController < ApplicationController
     end
 
     def create
-        babysitter = Babysitter.find_by!(id:params[:id])
+        babysitter = Babysitter.find_by!(id:params[:booking] [:id])
         user = @current_user
-        booking = bookings.create!(babysitter:babysitter, user:user, date: params[:booking] [:date])
+        booking = Booking.create!(babysitter:babysitter, user:user, date: params[:booking] [:date])
         render json: booking, include: [:babysitter, :user]
     end
 
