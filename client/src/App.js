@@ -13,6 +13,7 @@ import Profile from "./pages/Profile";
 function App() {
   const [user, setUser] = useState(null);
 
+
   useEffect(() => {
     // auto-login
     fetch("/api/me").then((r) => {

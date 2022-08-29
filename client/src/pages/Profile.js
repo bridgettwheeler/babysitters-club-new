@@ -35,13 +35,13 @@ function Profile({user, setUser}) {
     })
       .then(resp => {
         if (resp.ok){
-          resp.json().then(()=> alert('Email updated to:' + resp.user.email))
+          return resp.json()
 
         } else {
           resp.json().then((error)=> alert(error))
         }
         
-      })
+      }).then(function(data){alert("Email changed to: " + data.email)})
   }
 
   return (

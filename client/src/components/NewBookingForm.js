@@ -1,15 +1,16 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import BabysittersList from "./BabysittersList";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+//https://v5.reactrouter.com/web/api/Hooks
+//https://reactgo.com/npm-install-specific-directory/
 
 const NewBookingForm = ({user, babysitter}) => {
+  const {id} = useParams();
+ 
   const [booking, setBooking] = useState({
     date: "",
-    babysitter_id:""
+    id:id
   });
 
-
-  const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -28,7 +29,7 @@ const NewBookingForm = ({user, babysitter}) => {
         // r.json().then(booking => setUser(currentUser => {...currentUser, bookings: [...user.bookings, booking]}) 
         navigate("/profile");
       } else {
-        r.json().then((err) => setErrors(err.errors));
+        r.json().then((err) => console.log(err.errors));
       }
     });
   }
@@ -42,7 +43,7 @@ const NewBookingForm = ({user, babysitter}) => {
         name="date"
         type="datetime-local"
         id="date"
-        value={booking.date, booking.babysitter_id}
+        value={booking.date, booking.id}
         />
         <button type="submit">{isLoading ? "Loading..." : "Book"}</button>
       </form>
