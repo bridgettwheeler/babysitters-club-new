@@ -1,5 +1,5 @@
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.13.0/ext/bootsnap
-/Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220829-83394-1x8jq2g.rb extconf.rb
+/Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220831-92395-mnmdf9.rb extconf.rb
 creating Makefile
 
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.13.0/ext/bootsnap
@@ -12,4 +12,4 @@ linking shared-object bootsnap/bootsnap.bundle
 
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.13.0/ext/bootsnap
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20220829-83394-kf8ad9/bootsnap
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20220831-92395-57zylb/bootsnap

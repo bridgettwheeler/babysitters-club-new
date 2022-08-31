@@ -1,5 +1,5 @@
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
-/Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220829-76299-1ddkgvy.rb extconf.rb
+/Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220831-92395-h76u10.rb extconf.rb
 creating Makefile
 
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
@@ -12,4 +12,4 @@ linking shared-object websocket_mask.bundle
 
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20220829-76299-jdaubj
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20220831-92395-1cn19op

@@ -1,5 +1,5 @@
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/debug-1.6.2/ext/debug
-/Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220829-83394-wayksc.rb extconf.rb
+/Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220831-92395-1n3rkew.rb extconf.rb
 creating Makefile
 
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/debug-1.6.2/ext/debug
@@ -13,4 +13,4 @@ linking shared-object debug/debug.bundle
 
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/debug-1.6.2/ext/debug
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 debug.bundle ./.gem.20220829-83394-1qu12cm/debug
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 debug.bundle ./.gem.20220831-92395-1dfzg4g/debug

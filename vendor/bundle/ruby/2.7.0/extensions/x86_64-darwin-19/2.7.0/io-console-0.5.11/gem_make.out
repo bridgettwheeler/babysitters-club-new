@@ -1,5 +1,5 @@
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/io-console-0.5.11/ext/io/console
-/Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220829-76299-k8oo1r.rb extconf.rb
+/Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220831-92395-12mqniw.rb extconf.rb
 checking for termios.h... yes
 checking for cfmakeraw() in termios.h... yes
 checking for sys/ioctl.h... yes
@@ -17,4 +17,4 @@ linking shared-object io/console.bundle
 
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/io-console-0.5.11/ext/io/console
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 console.bundle ./.gem.20220829-76299-ytpivr/io
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 console.bundle ./.gem.20220831-92395-f7bdnl/io

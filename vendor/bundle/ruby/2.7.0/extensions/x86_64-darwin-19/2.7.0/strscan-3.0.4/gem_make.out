@@ -1,5 +1,5 @@
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.4/ext/strscan
-/Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220829-83394-gvveek.rb extconf.rb
+/Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220831-92395-s35uax.rb extconf.rb
 checking for onig_region_memsize() in ruby.h... yes
 creating Makefile
 
@@ -13,4 +13,4 @@ linking shared-object strscan.bundle
 
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.4/ext/strscan
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 strscan.bundle ./.gem.20220829-83394-glevbx
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 strscan.bundle ./.gem.20220831-92395-1c7npi9

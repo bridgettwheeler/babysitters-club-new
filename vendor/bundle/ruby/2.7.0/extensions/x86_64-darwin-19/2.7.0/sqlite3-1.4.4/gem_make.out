@@ -1,5 +1,5 @@
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/sqlite3-1.4.4/ext/sqlite3
-/Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220829-76299-1ufi2jg.rb extconf.rb
+/Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/bridgettwheeler/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220831-92395-4vg70e.rb extconf.rb
 checking for sqlite3.h... yes
 checking for pthread_create() in -lpthread... yes
 checking for -ldl... yes
@@ -65,4 +65,4 @@ ld: warning: directory not found for option '-L/usr/local/opt/sqlite/lib'
 
 current directory: /Users/bridgettwheeler/babysitters-club-new/vendor/bundle/ruby/2.7.0/gems/sqlite3-1.4.4/ext/sqlite3
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 sqlite3_native.bundle ./.gem.20220829-76299-1kea9fy/sqlite3
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 sqlite3_native.bundle ./.gem.20220831-92395-1uibjir/sqlite3
