@@ -1,4 +1,6 @@
-require_relative '../spec_helper'
+require 'spec_helper'
+require 'rails_helper'
+
 
 
 # t.string "first_name"
@@ -13,9 +15,8 @@ require_relative '../spec_helper'
 #     t.string "password_digest"
 #     t.datetime "created_at", null: false
 #     t.datetime "updated_at", null: false
-RSpec.describe User, type: :model do
-  it "is valid with valid attributes" 
-  it "is not valid without a first_name"
-  it "is not valid without a last_name"
-  it "is not valid without a email"
+describe User do
+  it "cannot create without email" do
+    expect {User.create!}.to raise_error ActiveRecord::RecordInvalid
+  end
 end
