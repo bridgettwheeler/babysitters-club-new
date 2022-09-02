@@ -1,5 +1,7 @@
 import {useState} from 'react'
 import { useNavigate } from "react-router-dom";
+import BabysittersList from '../components/BabysittersList';
+import BabysitterCard from '../components/BabysitterCard';
 
 
 function Profile({user, setUser}) {
@@ -43,17 +45,39 @@ function Profile({user, setUser}) {
         
       }).then(function(data){alert("Email changed to: " + data.email)})
   }
+  const listItems = user.babysitters.map((b) => <li>{b.first_name}</li>)
+  const listTimes = user.bookings.map((booking) => <li>{booking.date}</li>)
+
+  console.log(user)
 
   return (
     <div>
         <h2>Your Account Details:</h2>
-        Welcome, {user.first_name} !
-        <div>
-
-          {user.kids.map((kid) => kid.first_name)} 
-        </div>
+        Welcome, {user.username} !
         
+        <div>
+          <p>Here are the kids associated with this account:</p>
+          
+        </div>
+        {user.kids.map((kid) => kid.first_name)} 
 
+
+        <p>Here are the babysitters associated for this user:</p>
+        {/* <ul>
+        {user.bookings.map(babysitter => <BabysitterCard key={babysitter.babysitter_id} babysitter={babysitter} user={user} />)}
+        </ul> */}
+        {/* {[... new Set(user.babysitters.map((b) => b.first_name))]} */}
+        <ul>
+          {listItems}
+        </ul>
+
+        <p>
+          These are the times of the bookings for this user: 
+        </p>
+        <ul>
+            {listTimes}
+          </ul>
+        
          <form name='account'>
         <label htmlFor="date">Email: </label>
         <input

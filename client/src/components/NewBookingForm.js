@@ -5,7 +5,10 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const NewBookingForm = ({user, babysitter}) => {
   const {id} = useParams();
- 
+  const [sitter, setSitter] = useState({
+
+  });
+
   const [booking, setBooking] = useState({
     date: "",
     id:id
@@ -26,12 +29,15 @@ const NewBookingForm = ({user, babysitter}) => {
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
-        // r.json().then(booking => setUser(currentUser => {...currentUser, bookings: [...user.bookings, booking]}) 
-        navigate("/profile");
+        // r.json().then(booking => setUser(currentUser => {...currentUser, bookings: [...user.bookings, booking]})
+        return r.json();
       } else {
         r.json().then((err) => console.log(err.errors));
       }
-    });
+    }).then((responseJson) => {
+        console.log(responseJson);        
+        navigate("/profile");
+  });
   }
   return (
     <div>
