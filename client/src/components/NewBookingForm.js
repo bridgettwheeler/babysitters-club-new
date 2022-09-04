@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useHistory } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 //https://v5.reactrouter.com/web/api/Hooks
 //https://reactgo.com/npm-install-specific-directory/
@@ -16,6 +16,13 @@ const NewBookingForm = ({user, babysitter}) => {
 
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  
+  function handleChange(e) {
+    setBooking({
+      ...booking,
+      [e.target.name]: e.target.value,
+    });
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -45,11 +52,18 @@ const NewBookingForm = ({user, babysitter}) => {
       <form onSubmit={handleSubmit}>
         <label htmlFor="date">Select date and time</label>
         <input
-        onChange={ e => setBooking({...booking, [e.target.name]: e.target.value})}
+        onChange={handleChange}
         name="date"
         type="datetime-local"
         id="date"
-        value={booking.date, booking.id}
+        value={booking.date}
+        />
+        <input
+        onChange={handleChange}
+        name="date"
+        type="hidden"
+        id="booking_id"
+        value={booking.id}
         />
         <button type="submit">{isLoading ? "Loading..." : "Book"}</button>
       </form>

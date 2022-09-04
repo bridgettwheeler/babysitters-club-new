@@ -1,7 +1,5 @@
 import {useState} from 'react'
 import { useNavigate } from "react-router-dom";
-import BabysittersList from '../components/BabysittersList';
-import BabysitterCard from '../components/BabysitterCard';
 
 
 function Profile({user, setUser}) {
