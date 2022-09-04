@@ -1,8 +1,18 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import { useNavigate } from "react-router-dom";
 
 
 function Profile({user, setUser}) {
+  
+  useEffect(() => {
+    // auto-login
+    fetch("/api/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
+  }, [setUser]);
+  
   const navigate = useNavigate();
 
 

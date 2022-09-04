@@ -1,4 +1,4 @@
-import { useState, useEffect, useHistory } from "react";
+import { useState, useEffect} from "react";
 import { useNavigate, useParams } from "react-router-dom";
 //https://v5.reactrouter.com/web/api/Hooks
 //https://reactgo.com/npm-install-specific-directory/
@@ -16,7 +16,7 @@ const NewBookingForm = ({user, babysitter}) => {
 
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
-  
+
   function handleChange(e) {
     setBooking({
       ...booking,
@@ -60,7 +60,7 @@ const NewBookingForm = ({user, babysitter}) => {
         />
         <input
         onChange={handleChange}
-        name="date"
+        name="booking_id"
         type="hidden"
         id="booking_id"
         value={booking.id}

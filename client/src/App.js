@@ -14,7 +14,7 @@ function App() {
   const [user, setUser] = useState(null);
 
 
-  useState(() => {
+  useEffect(() => {
     // auto-login
     fetch("/api/me").then((r) => {
       if (r.ok) {
@@ -47,7 +47,7 @@ function App() {
         </Routes>
 
         <Routes>
-          <Route path="/profile" forceRefresh={true} element={<Profile user={user} setUser={setUser} />} />
+          <Route path="/profile" element={<Profile user={user} setUser={setUser} />} />
         </Routes>
 
       </BrowserRouter>
